@@ -20,6 +20,17 @@
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: var(--paars);
+}
+
+a:hover {
+    text-decoration: underline;
+}
 
 h1 {
     margin: 20px 0px;
@@ -40,6 +51,7 @@ button {
     color: var(--lichtpaars);
     cursor: pointer;
     text-transform: uppercase;
+    margin: 10px 0px;
 
 }
 
@@ -110,6 +122,7 @@ li {
     text-align: center;
     padding: 150px 0px;
     border: 1px #055;
+    max-width: 60%;
 }
 
 /* --------------- 4.1 Introduction  ------------------------- */
@@ -121,13 +134,112 @@ li {
     color: var(--paars);
     font-family: merriweather, serif;
     border: 1px #000;
+    font-size: 1.2rem;
+    padding: 20px 0px;
+    text-align: center;
 }
 
 .introduction_inner {
-    border 1px #000;
+    width: 60%;
 }
 
+.introduction_inner p {
+    padding: 10px;
+}
+
+.introduction_inner span {
+    color: var(--zwart);
+    font-size: 0.8rem;
+    font-family: "Roboto Light", sans-serif;
+}
+
+
+
+
 /* --------------- 4.2 Areas ------------------- */
+
+.case_studies {
+    background-color: var(--lichtgrijs);
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    justify-content: center;
+    padding: 30px 20px;
+
+}
+
+.case_studies_inner {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 0px;
+
+}
+
+.article_text a {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+
+}
+
+article.reverse {
+    flex-direction: row-reverse;
+}
+
+.article_text {
+    flex-basis: 400px;
+    padding: 20px;
+}
+
+.article_text p {
+    padding: 20px 0px 40px 0px;
+}
+
+
+.image_wrapper {
+    flex-basis: 600px;
+    flex-grow: 0;
+    flex-shrink: 1;
+
+}
+
+/* Tiles area */
+
+.tiles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+.tiles_inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tiles_inner img {
+    width: 70px;
+}
+
+.tiles_inner article {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    flex-shrink: 0;
+
+}
+
 
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
