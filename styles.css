@@ -23,6 +23,10 @@
 img {
     width: 100%;
 }
+span {
+    color: var(--lichtpaars);
+}
+
 a {
     text-decoration: none;
     color: var(--paars);
@@ -30,6 +34,10 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+p {
+    color: var(--zwart)
 }
 
 h1 {
@@ -42,6 +50,12 @@ h2 {
     font-family: merriweather, serif;
 }
 
+h3 {
+    margin: 20px 0px 30px 0px;
+    font-family: merriweather, serif;
+    color: var(--paars);
+}
+
 button {
     background-color: var(--roze);
     border-radius: 25px;
@@ -52,8 +66,14 @@ button {
     cursor: pointer;
     text-transform: uppercase;
     margin: 10px 0px;
+    min-width: 150px;
 
 }
+
+button:hover {
+    box-shadow: none;
+}
+
 
 
 
@@ -106,6 +126,10 @@ nav {
     height: 50px;
 }
 
+nav a {
+    color: var(--lichtpaars);
+}
+
 ul {
     border: 1px #852;
     display: flex;
@@ -125,6 +149,23 @@ li {
     max-width: 60%;
 }
 
+.squigle_wrapper {
+    position: relative;
+
+
+}
+.squigle_wrapper img {
+    width: 50px;
+    position: absolute;
+    left: 50%;
+}
+
+.squigle {
+    background-image: url("assets/squiggle_line_stripe.svg");
+
+}
+
+
 /* --------------- 4.1 Introduction  ------------------------- */
 
 .introduction {
@@ -135,7 +176,7 @@ li {
     font-family: merriweather, serif;
     border: 1px #000;
     font-size: 1.2rem;
-    padding: 20px 0px;
+    padding: 50px 0px;
     text-align: center;
 }
 
@@ -147,10 +188,12 @@ li {
     padding: 10px;
 }
 
-.introduction_inner span {
+#contact_shortcut {
     color: var(--zwart);
     font-size: 0.8rem;
     font-family: "Roboto Light", sans-serif;
+    margin-top: 40px;
+
 }
 
 
@@ -211,35 +254,110 @@ article.reverse {
 
 }
 
+.case_studies img {
+    box-shadow: 0 8px 15px rgb(0 0 0 / 35%);
+}
+
 /* Tiles area */
 
 .tiles {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     padding: 20px 0px;
+    min-width: 100%;
+    justify-content: center;
 }
 
 .tiles_inner {
     display: flex;
-    flex-direction: column;
-    max-width: 800px;
+    flex-direction: row;
+    width: 70%;
+    max-width: 1000px;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
-.tiles_inner img {
+.tile {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    margin: 20px 10px;
+    border: 2px solid var(--paars);
+
+}
+
+.tile img {
     width: 70px;
 }
 
-.tiles_inner article {
+/* Contact us area */
+
+.contact_us {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    background: rgb(72,69,228);
+    background: linear-gradient(87deg, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
+    padding: 60px 0px;
+    justify-content: center;
+    color: var(--lichtpaars);
+}
+
+.contact_inner {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    flex-shrink: 0;
+    align-items: center;
+
+}
+
+.contact_inner h2 {
+    font-size: 1.8rem;
+}
+
+form {
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#form_button {
+    align-self: center;
+}
+
+form input {
+    padding: 10px;
+    margin: 5px 0px;
+}
+
+form textarea {
+    padding: 10px;
+    margin: 5px 0px;
+    font-family: "Roboto Light", sans-serif;
+}
+
+/*Footer */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    background-color: #0C0C0C;
+    padding: 10px;
+
 
 }
 
 
-
+footer p {
+    font-family: "Roboto Thin", sans-serif;
+    font-size: 0.6rem;
+    color: var(--lichtpaars);
+}
 /* ------------------------------- 5. Media Queries -------------------------------- */
