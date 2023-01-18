@@ -144,7 +144,7 @@ li {
 
 .intro {
     text-align: center;
-    padding: 150px 0px;
+    padding: 120px 0px;
     border: 1px #055;
     max-width: 60%;
 }
@@ -152,12 +152,12 @@ li {
 .squigle_wrapper {
     position: relative;
 
-
 }
+
 .squigle_wrapper img {
-    width: 50px;
-    position: absolute;
-    left: 50%;
+    width: 80px;
+    position: relative;
+    top:140px;
 }
 
 .squigle {
@@ -227,6 +227,7 @@ article {
 
 }
 
+
 .article_text a {
     text-transform: uppercase;
     font-size: 0.8rem;
@@ -240,6 +241,17 @@ article.reverse {
 .article_text {
     flex-basis: 400px;
     padding: 20px;
+    position: relative;
+}
+
+.article_text::before {
+    content: url("assets/squiggle_line.svg");
+    display: block;
+    color: var(--paars);
+    position: absolute;
+    top: 70px;
+    width: 50px;
+
 }
 
 .article_text p {
